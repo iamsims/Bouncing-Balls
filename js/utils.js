@@ -1,6 +1,6 @@
 function Ball(speed, ballRadius){
-    this.x= randomNumber(0+BALLRADIUS/2, WIDTH-BALLRADIUS/2);
-    this.y= randomNumber(0+BALLRADIUS/2, HEIGHT-BALLRADIUS/2);
+    this.x= randomNumber(0+ballRadius/2, WIDTH-ballRadius/2);
+    this.y= randomNumber(0+ballRadius/2, HEIGHT-ballRadius/2);
     this.slope = randomNumber(-1,1);
     this.direction = DIRECTION[Math.floor(Math.random() * DIRECTION.length)];
     this.dx= speed*this.direction;
@@ -17,6 +17,9 @@ function Ball(speed, ballRadius){
     }
 
     this.update =()=>{
+
+
+
         if(this.x + this.dx > canvas.width - this.ballRadius || this.x + this.dx < this.ballRadius) {
             this.dx = -this.dx;
         }
