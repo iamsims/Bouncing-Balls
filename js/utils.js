@@ -31,8 +31,8 @@ function Ball(speed, ballRadius){
                     this.dx=-this.dx;
                     this.dy=-this.dy;
 
-                    this.x-=distX/2+this.dx;
-                    this.y-=distY/2+ this.dy; 
+                    this.x-=distX/BALLCOUNT;
+                    this.y-=distY/BALLCOUNT; 
 
                     if(this.x<this.ballRadius)this.x=ballRadius;
                     if(this.x>WIDTH-this.ballRadius) this.x= WIDTH-this.ballRadius;
