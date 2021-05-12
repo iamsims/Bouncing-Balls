@@ -16,8 +16,8 @@ for(let i =0;i<BALLCOUNT; i++){
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    balls.forEach(function(ball){ball.draw()})
-    balls.forEach(function(ball){ball.update()})
+    balls.forEach(function(ball){ball.draw();});
+    balls.forEach(function(ball,index){ball.update(index);});
 }
 
-setInterval(draw, 10);
+setInterval(draw, REFRESH_TIME);
